@@ -4,11 +4,11 @@ ro.crypto.metadata_init_delete_all_keys.enabled=false
 ro.crypto.dm_default_key.options_format.version=2
 ro.crypto.volume.metadata.method=dm-default-key
 ro.crypto.volume.filenames_mode=aes-256-cts:v2
-ro.security.keystore.keytype=gak
+ro.hardware.keystore_desede=true
+ro.security.keystore.keytype=sakv2,gak,rkp
 ro.hardware.keystore=mdfpp
 ro.hardware.gatekeeper=mdfpp
-keymaster_ver=4.0
+#keymaster_ver=4.0
 
 # USB
 vendor.usb.use_ffs_mtp=1
-vendor.usb.controller=4e00000.dwc3
