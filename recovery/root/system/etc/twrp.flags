@@ -1,0 +1,33 @@
+# Logical partitions
+/system_image             emmc      /dev/block/bootdevice/by-name/system                                flags=display="System Image";logical;backup=1;flashimg
+/vendor_image             emmc     /dev/block/bootdevice/by-name/vendor                                flags=display="Vendor Image";logical;backup=1;flashimg
+/product_image            emmc     /dev/block/bootdevice/by-name/product                               flags=display="Product Image";logical;backup=1;flashimg
+/odm_image                emmc     /dev/block/bootdevice/by-name/odm                                   flags=display="ODM Image";logical;backup=1;flashimg
+/system_ext_image         emmc     /dev/block/bootdevice/by-name/system_ext                            flags=display="System EXT";logical;backup=1;flashimg
+/vendor_dlkm_image        emmc     /dev/block/bootdevice/by-name/vendor_dlkm                           flags=display=Vendor DLKM";logical;backup=1;flashimg
+
+# Physical partitions
+/boot               emmc      /dev/block/by-name/boot               flags=display="boot";flashimg;backup=1
+/recovery           emmc      /dev/block/by-name/recovery           flags=display="recovery";flashimg;backup=1
+/efs                ext4      /dev/block/by-name/sec_efs            flags=display="efs";backup=1
+/sec_efs            ext4      /dev/block/by-name/sec_efs            flags=display="sec_efs";backup=1
+/carrier            ext4      /dev/block/by-name/carrier            flags=display="carrier";backup=1
+/preload            ext4      /dev/block/by-name/hidden             flags=display="preload";backup=1
+/modem              emmc      /dev/block/by-name/radio              flags=display="modem";backup=1
+/misc               emmc      /dev/block/by-name/misc               flags=display="misc";backup=1
+/keydata            ext4      /dev/block/by-name/keydata            flags=display="keydata";backup=1
+/keyrefuge          f2fs      /dev/block/by-name/keyrefuge          flags=display="keyrefuge";backup=1
+/dtbo               emmc      /dev/block/by-name/dtbo               flags=display="dtbo";flashimg;backup=1
+/prism              ext4      /dev/block/by-name/prism              flags=display="prism";flashimg;backup=1
+/optics             ext4      /dev/block/by-name/optics             flags=display="optics";flashimg;backup=1
+/vbmeta_system      emmc      /dev/block/by-name/vbmeta_system      flags=display="vbmeta_system";flashimg;backup=1
+/vendor_boot        emmc      /dev/block/by-name/vendor_boot        flags=display="vendor_boot";flashimg;backup=1
+/vbmeta_samsung     emmc      /dev/block/by-name/vbmeta_samsung     flags=display="vbmeta_samsung";flashimg;backup=1
+
+# data
+/metadata           ext4      /dev/block/by-name/metadata           flags=display="metadata";backup=1
+/data               f2fs      /dev/block/by-name/userdata           flags=display="data";backup=1
+/cache              ext4      /dev/block/by-name/cache              flags=display="cache"
+
+# Extended
+/sdcard             sdfat     /dev/block/mmcblk0p1                  flags=display=sdcard
