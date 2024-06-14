@@ -66,7 +66,7 @@ BOARD_MKBOOTIMG_ARGS := \
 --kernel_offset=0x10000000 \
 --ramdisk_offset=0x00000000 \
 --tags_offset=0x00000000 \
---header_version $(BOARD_BOOTIMG_HEADER_VERSION)
+--header_version $(BOARD_BOOTIMG_HEADER_VERSION) \
 --dtb $(TARGET_PREBUILT_DTB)
 
 # Partitions
