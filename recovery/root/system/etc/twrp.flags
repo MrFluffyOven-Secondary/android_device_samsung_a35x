@@ -29,5 +29,6 @@
 /data               f2fs      /dev/block/by-name/userdata           flags=display="data";backup=1
 /cache              ext4      /dev/block/by-name/cache              flags=display="cache"
 
-# Extended
-/sdcard             sdfat     /dev/block/mmcblk0p1                  flags=display=sdcard
+# External
+/sdcard1        auto    /dev/block/mmcblk1p1 /dev/block/mmcblk1                 flags=fsflags=utf8;display="MicroSD";storage;wipeingui;removable
+/usb-otg	auto	/dev/block/sda1	/dev/block/sda				flags=display="USB-OTG";storage;wipeingui;removable
