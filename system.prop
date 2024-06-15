@@ -1,6 +1,7 @@
 ro.display.series=Galaxy A35
 ro.product.board=s5e8835
-ro.board.platform=erd8835
+#ro.board.platform=erd8835
+ro.board.platform=universal8835
 sys.usb.controller=13200000.dwc3
 ro.boot.usbcontroller=13200000.dwc3
 ro.boot.dynamic_partitions=true 
