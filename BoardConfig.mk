@@ -155,3 +155,6 @@ TWRP_EVENT_LOGGING := true
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 PRODUCT_ENFORCE_VINTF_MANIFEST := true
+
+# Modules
+TW_LOAD_VENDOR_MODULES := $(shell echo \"$(shell ls $(DEVICE_PATH)/recovery/root/lib/modules)\")
